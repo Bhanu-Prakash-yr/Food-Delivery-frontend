@@ -1,0 +1,120 @@
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: -webkit-sticky; /* For Safari *//*From this part the sticky thing is obtained through the css in the chat gpt*/
+    position: sticky;         /* For other modern browsers */
+    top: 0;                   /* Position the navbar at the top */
+    background-color: #ffffff;   /* Ensure background color to prevent transparency issues */
+    z-index: 1000;            /* Ensure the navbar stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+.navbar .logo{
+    width: 150px;
+}
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    
+}
+.navbar button{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;/*This line of code imposes to change the baground of the button to changed smoothly with 0.3seconds*/
+}
+.navbar button:hover{/*This part acrtually is for hover onthe button to look good*/
+    background-color: #fff4f2;
+}
+.navbar .active{
+    border-bottom: 2px solid #49557e;
+    padding-bottom: 2px ;
+}
+/*their is a lot like underline function in the menu which is like in lists i have taken the onclick function and the const [menu,setMenu]=useState("home"); this is also a code snippet for the under line while hovering */ 
+.navbar li{
+    cursor: pointer;
+}
+.navbar-search-icon{
+    position: relative;
+}
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+    
+
+}
+@media (max-width:1050px) {
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+}
+@media (max-width:900px) {
+    .navbar .logo{
+        width: 120px;
+    }
+    .navbar-menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+
+}
+@media (max-width:750px) {
+   /* .navbar .logo{
+        width: 140px;
+    }*/
+    .navbar-menu{
+        display: none;
+        
+    }
+   /* .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }*/
+}
